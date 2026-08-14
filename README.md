@@ -38,3 +38,9 @@ Angelaki & Cullen(2008): vestibular 신호가 **velocity storage** 메커니즘�
 
 - **RQ1.** STL의 hysteresis window가 별도 comparator/timer 없이 biological refractory period와 rate coding을 대체할 수 있는가? 그때 neuron당 소자 수와 spike당 에너지는 subthreshold CMOS 대비 얼마나 감소하는가?
 - **RQ2.** Latch의 all-or-none 특성이 cross-inhibition의 noise margin과 CMRR을 원래 회로 대비 얼마나 개선하는가?
+
+## 마지막. References
+- Malinvaud, D., Vassias, I., Reichenberger, I., Rössert, C., & Straka, H. (2010). Functional organization of vestibular commissural connections in frog. Journal of Neuroscience, 30(9), 3310–3325. doi:10.1523/JNEUROSCI.5318-09.2010
+- Corradi, F., Zambrano, D., Raglianti, M., Passetti, G., Laschi, C., & Indiveri, G. (2014). Towards a neuromorphic vestibular system. IEEE Transactions on Biomedical Circuits and Systems, 8(5), 669–680. doi:10.1109/TBCAS.2014.2358493 (초기 버전: IEEE ISCAS 2014)
+- Angelaki, D. E., & Cullen, K. E. (2008). Vestibular system: the many facets of a multimodal sense. Annual Review of Neuroscience, 31, 125–150.
+- Chen, C.-E. D., Matloubian, M., Sundaresan, R., Mao, B.-Y., Wei, C. C., & Pollack, G. P. (1988). Single-transistor latch in SOI MOSFETs. IEEE Electron Device Letters, 9(12), 636–638.
