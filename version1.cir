@@ -1,0 +1,54 @@
+* [L1] Neuromorphic Vestibular Push-Pull Stage
+.param V_bias = 0.5        ; resting discharge bias (V)
+.param V_up   = 0.45       ; latch-up threshold (V)
+.param V_hy   = 0.10       ; hysteresis window -> refractory margin (V)
+.param R_g    = 100k       ; finite gate-node impedance (inhibition 가능)
+.param C_g    = 100n       ; membrane capacitance -> tau_m = 10 ms
+.param R_on   = 500
+.param R_off  = 50k
+
+VDD VDD 0 1.8
+V_head IN 0 SINE(0 0.2 1)
+
+* --- push-pull sensor stage (좌우 상반 응답) ---
+E_src_L GL_SRC 0 VALUE={V_bias + V(IN)}
+E_src_R GR_SRC 0 VALUE={V_bias - V(IN)}
+R_gL GL_SRC GATE_L {R_g}
+R_gR GR_SRC GATE_R {R_g}
+C_gL GATE_L 0 {C_g}
+C_gR GATE_R 0 {C_g}
+
+* --- latch core: threshold + hysteresis (all-or-none + refractory) ---
+A_lat_L GATE_L 0 0 0 0 SPIKE_L 0 0 SCHMITT Vt={V_up-V_hy/2} Vh={V_hy/2}
++ Vhigh=1.8 Vlow=0 Trise=10n Tfall=10n
+A_lat_R GATE_R 0 0 0 0 SPIKE_R 0 0 SCHMITT Vt={V_up-V_hy/2} Vh={V_hy/2}
++ Vhigh=1.8 Vlow=0 Trise=10n Tfall=10n
+
+* --- latched channel conductance (STL on/off resistance) ---
+B_chan_L DRAIN_L 0 I = IF(V(SPIKE_L)>0.9, V(DRAIN_L)/{R_on}, V(DRAIN_L)/{R_off})
+B_chan_R DRAIN_R 0 I = IF(V(SPIKE_R)>0.9, V(DRAIN_R)/{R_on}, V(DRAIN_R)/{R_off})
+R_load_L VDD DRAIN_L 1k
+R_load_R VDD DRAIN_R 1k
+
+* --- self-reset (AHP) : 반복 발화 성립 조건 ---
+M_ahp_L GATE_L SPIKE_L 0 0 NMOS W=2u L=0.18u
+M_ahp_R GATE_R SPIKE_R 0 0 NMOS W=2u L=0.18u
+
+* --- commissural cross-inhibition (극성 수정: SPIKE 노드로 구동) ---
+M_com_R GATE_R SPIKE_L 0 0 NMOS W=1u L=0.18u
+M_com_L GATE_L SPIKE_R 0 0 NMOS W=1u L=0.18u
+.model NMOS NMOS(Vto=0.4 KP=200u)
+
+* --- velocity storage (leaky integrator) ---
+R_int_L SPIKE_L V_INT_L 10k
+C_int_L V_INT_L 0 22u       ; tau_vs = 0.22 s
+R_int_R SPIKE_R V_INT_R 10k
+C_int_R V_INT_R 0 22u
+
+* --- differential VOR output ---
+E_diff VOR_OUT 0 VALUE={V(V_INT_L) - V(V_INT_R)}
+
+.tran 0 5 0 20u
+.options plotwinsize=0
+.end
+
