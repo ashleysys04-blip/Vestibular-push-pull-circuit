@@ -1,13 +1,13 @@
 LTspice 26.0.2 for Windows
 Circuit: C:\Users\zeron\OneDrive\바탕 화면\Ashley\vestibular\Vestibular-push-pull-circuit\circuit_ver1_0814.net
-Start Time: Fri Aug 14 22:59:12 2026
+Start Time: Fri Aug 14 23:12:46 2026
 solver = Alternate
 Maximum thread count: 8
 tnom = 27
 temp = 27
 method = modified trap
 Direct Newton iteration succeeded in finding operating point.
-Total elapsed time: 5.362 seconds.
+Total elapsed time: 5.790 seconds.
 
 Files loaded:
 C:\Users\zeron\OneDrive\바탕 화면\Ashley\vestibular\Vestibular-push-pull-circuit\circuit_ver1_0814.net
