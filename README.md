@@ -43,4 +43,3 @@ Angelaki & Cullen(2008): vestibular 신호가 **velocity storage** 메커니즘�
 - Malinvaud, D., Vassias, I., Reichenberger, I., Rössert, C., & Straka, H. (2010). Functional organization of vestibular commissural connections in frog. Journal of Neuroscience, 30(9), 3310–3325. doi:10.1523/JNEUROSCI.5318-09.2010
 - Corradi, F., Zambrano, D., Raglianti, M., Passetti, G., Laschi, C., & Indiveri, G. (2014). Towards a neuromorphic vestibular system. IEEE Transactions on Biomedical Circuits and Systems, 8(5), 669–680. doi:10.1109/TBCAS.2014.2358493 (초기 버전: IEEE ISCAS 2014)
 - Angelaki, D. E., & Cullen, K. E. (2008). Vestibular system: the many facets of a multimodal sense. Annual Review of Neuroscience, 31, 125–150.
-- Chen, C.-E. D., Matloubian, M., Sundaresan, R., Mao, B.-Y., Wei, C. C., & Pollack, G. P. (1988). Single-transistor latch in SOI MOSFETs. IEEE Electron Device Letters, 9(12), 636–638.
