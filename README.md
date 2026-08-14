@@ -43,3 +43,9 @@ Angelaki & Cullen(2008): vestibular 신호가 **velocity storage** 메커니즘�
 - Malinvaud, D., Vassias, I., Reichenberger, I., Rössert, C., & Straka, H. (2010). Functional organization of vestibular commissural connections in frog. Journal of Neuroscience, 30(9), 3310–3325. doi:10.1523/JNEUROSCI.5318-09.2010
 - Corradi, F., Zambrano, D., Raglianti, M., Passetti, G., Laschi, C., & Indiveri, G. (2014). Towards a neuromorphic vestibular system. IEEE Transactions on Biomedical Circuits and Systems, 8(5), 669–680. doi:10.1109/TBCAS.2014.2358493 (초기 버전: IEEE ISCAS 2014)
 - Angelaki, D. E., & Cullen, K. E. (2008). Vestibular system: the many facets of a multimodal sense. Annual Review of Neuroscience, 31, 125–150.
+- STL에다가 constant하지 않은 전류를 넣은 논문들
+    - fig 2: Woo, S., Kim, S. Neural oscillation of single silicon nanowire neuron device with no external bias voltage. Sci Rep 12, 3516 (2022). https://doi.org/10.1038/s41598-022-07374-2
+    - fig 7: I. M. Sheriff and R. Sakthivel, "The Artificial Neuron: Built From Nanosheet Transistors to Achieve Ultra Low Power Consumption," in IEEE Access, vol. 12, pp. 11653-11663, 2024, doi: 10.1109/ACCESS.2024.3350268.
+    - fig 3: D. Lim, K. Cho and S. Kim, "Single Silicon Neuron Device Enabling Neuronal Oscillation and Stochastic Dynamics," in IEEE Electron Device Letters, vol. 42, no. 5, pp. 649-652, May 2021, doi: 10.1109/LED.2021.3063954.
+
+
