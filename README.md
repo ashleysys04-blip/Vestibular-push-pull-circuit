@@ -2,7 +2,7 @@
 
 ## 0. Abstract
 
-뇌의 vestibular system은 좌우 labyrinth의 상반된 응답을 결합하는 **push-pull** 구조와, brainstem에서의 **commissural inhibition(좌뇌와 우뇌가 서로 교차되면서 억제하는 메커니즘)**을 통해 **dynamic range를 확장**하고 **common-mode noise를 상쇄**한다. 기존 neuromorphic vestibular 구현(Corradi et al., 2014, INI에서 나온 논문)에서는 다수의 comparator·timer 회로를 써야 한다.
+뇌의 vestibular system은 좌우 labyrinth의 상반된 응답을 결합하는 **push-pull** 구조와, brainstem에서의 commissural inhibition(좌뇌와 우뇌가 서로 교차되면서 억제하는 메커니즘)을 통해 **dynamic range를 확장**하고 **common-mode noise를 상쇄**한다. 기존 neuromorphic vestibular 구현(Corradi et al., 2014, INI에서 나온 논문)에서는 다수의 comparator·timer 회로를 써야 한다.
 
 본 연구는 SOI 소자의 STL특성인 positive feedback과 hysteresis window를 생물학적 상황에서의 Na+ channel의 regenerative depolarization과 refractory period라고 해석하려 한다.
 
