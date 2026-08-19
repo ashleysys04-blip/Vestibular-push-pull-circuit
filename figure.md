@@ -1,7 +1,7 @@
 # Nano Letters Target Research Plan
 ## Hysteretic Antagonistic Silicon Devices for History-Dependent Vestibular Encoding
 
-## 1. 개요
+## 1. 연구의 핵심 아이디어
 
 본 연구는 single-transistor latch(STL)의 **intrinsic hysteresis**를 단순한 switching 또는 spike-generation 현상으로 사용하는 것을 넘어, 두 개의 hysteretic silicon device를 antagonistic하게 구성하여 **이전 motion state를 기억하면서 방향 전환을 판단하는 stateful neuromorphic primitive**를 구현하는 것을 목표로 한다.
 
