@@ -131,6 +131,14 @@ push–pull architecture 만들기
 ### Fig. 1c — LTspice architecture
 - 좀 간단한 버전? 수준? 에서
 - 아니면 알고리즘 회로도로 표현하는게 나으면 그렇게
+- 아래 표도 포함해서
+| Left | Right | 의미                                               |
+| ---- | ----- | ------------------------------------------------ |
+| 0    | 0     | **Neutral**                                      |
+| 1    | 0     | **Left**                                         |
+| 0    | 1     | **Right**                                        |
+| 1    | 1     | Both active — 원칙적으로 가능하지만 mutual inhibition으로 억제 |
+
 
 ### Fig. 1d — Proposed operating principle
 
@@ -267,6 +275,13 @@ Strong Right
 ```
 
 즉 ternary directional state(left / neutral / right)를 **Quinary directional state**로 확장
+| Left | Right | 의미                                               |
+| ---- | ----- | ------------------------------------------------ |
+| 0    | 0     | **Neutral**                                      |
+| 1    | 0     | **Left**                                         |
+| 0    | 1     | **Right**                                        |
+| 1    | 1     | Both active — 원칙적으로 가능하지만 mutual inhibition으로 억제 |
+
 
 ---
 
