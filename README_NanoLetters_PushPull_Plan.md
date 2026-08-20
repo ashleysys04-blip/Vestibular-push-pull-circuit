@@ -24,9 +24,7 @@
 즉,
 
 $$
-\text{Current output}
-=
-F\!\left(\text{current input},\ \text{previous device state}\right)
+\text{Current output} = F\!\left(\text{current input},\ \text{previous device state}\right)
 $$
 
 를 device physics 자체에서 구현하는 것이 목표다.
@@ -40,15 +38,11 @@ $$
 기존 push–pull 구조:
 
 $$
-x(t) > 0
-\quad\Rightarrow\quad
-\text{Right channel dominant}
+x(t) > 0 \quad\Rightarrow\quad \text{Right channel dominant}
 $$
 
 $$
-x(t) < 0
-\quad\Rightarrow\quad
-\text{Left channel dominant}
+x(t) < 0 \quad\Rightarrow\quad \text{Left channel dominant}
 $$
 
 두 채널은 독립적인 half-wave detector가 아니라, **반대 방향으로 반응하면서 서로의 상태에 영향을 주는 antagonistic pair**로 본다.
@@ -56,15 +50,11 @@ $$
 개념적으로는 다음과 같이 표현할 수 있다.
 
 $$
-I_R^{\mathrm{eff}}
-=
-I_0 + kx(t) - gY_L
+I_R^{\mathrm{eff}} = I_0 + kx(t) - gY_L
 $$
 
 $$
-I_L^{\mathrm{eff}}
-=
-I_0 - kx(t) - gY_R
+I_L^{\mathrm{eff}} = I_0 - kx(t) - gY_R
 $$
 
 여기서
@@ -82,25 +72,19 @@ $$
 기존에는 주로 다음을 보았다.
 
 $$
-\text{input waveform}
-\rightarrow
-\text{push–pull response / spikes}
+\text{input waveform} \rightarrow \text{push–pull response / spikes}
 $$
 
 이번 논문에서는 여기에 hysteresis를 이용한 state retention을 추가한다.
 
 $$
-\text{strong Right input}
-\rightarrow
-R\text{-dominant state}
+\text{strong Right input} \rightarrow R\text{-dominant state}
 $$
 
 이후 input이 약해지거나 약한 Left input이 들어와도 상태가 바로 뒤집히지 않고,
 
 $$
-|x_{\mathrm{opposite}}|
->
-x_{\mathrm{reversal}}
+|x_{\mathrm{opposite}}| > x_{\mathrm{reversal}}
 $$
 
 일 때만 반대 state로 전환되는지를 확인한다.
@@ -148,9 +132,7 @@ $$
 라고 하면 hysteresis window는
 
 $$
-\Delta V_H
-=
-V_{\mathrm{LU}}-V_{\mathrm{LD}}
+\Delta V_H = V_{\mathrm{LU}}-V_{\mathrm{LD}}
 $$
 
 로 정의할 수 있다.
@@ -190,17 +172,13 @@ L-dominant state
 #### Case A
 
 $$
-\text{Strong Right}
-\rightarrow
-x(t_0)
+\text{Strong Right} \rightarrow x(t_0)
 $$
 
 #### Case B
 
 $$
-\text{Strong Left}
-\rightarrow
-x(t_0)
+\text{Strong Left} \rightarrow x(t_0)
 $$
 
 마지막 순간 입력은 동일하다.
@@ -384,12 +362,7 @@ push–pull system의 memory가 회로에 억지로 추가된 것이 아니라 *
 예:
 
 $$
-V_{\mathrm{in}}:
-0
-\rightarrow
-V_{\mathrm{high}}
-\rightarrow
-V_{\mathrm{mid}}
+V_{\mathrm{in}}: 0 \rightarrow V_{\mathrm{high}} \rightarrow V_{\mathrm{mid}}
 $$
 
 $V_{\mathrm{mid}}$가 latch-up threshold보다 낮더라도 device가 이전 state를 유지하는 것을 보여준다.
@@ -466,8 +439,7 @@ input 감소 시 positive feedback이 약해지고 원래 state로 복귀하는 
 plot:
 
 $$
-V_{\mathrm{LU}}(p),\qquad
-V_{\mathrm{LD}}(p)
+V_{\mathrm{LU}}(p),\qquad V_{\mathrm{LD}}(p)
 $$
 
 ### Fig. 3e — Hysteresis-window map
@@ -483,10 +455,7 @@ $$
 이 결과를 circuit language로 다시 해석한다.
 
 $$
-\Delta V_H
-\uparrow
-\quad\Rightarrow\quad
-\text{stronger state persistence / larger reversal threshold}
+\Delta V_H \uparrow \quad\Rightarrow\quad \text{stronger state persistence / larger reversal threshold}
 $$
 
 핵심 메시지:
@@ -530,15 +499,11 @@ $$
 확인할 것:
 
 $$
-x(t)>0
-\Rightarrow
-R>L
+x(t)>0 \Rightarrow R>L
 $$
 
 $$
-x(t)<0
-\Rightarrow
-L>R
+x(t)<0 \Rightarrow L>R
 $$
 
 즉 기존 연구를 버리지 않고 **정상적인 antagonistic response의 baseline**으로 사용한다.
@@ -596,9 +561,7 @@ $$
 그런데 output은
 
 $$
-R_A(t_0)-L_A(t_0)
-\neq
-R_B(t_0)-L_B(t_0)
+R_A(t_0)-L_A(t_0) \neq R_B(t_0)-L_B(t_0)
 $$
 
 가 되는지를 확인한다.
