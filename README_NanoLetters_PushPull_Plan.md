@@ -1,39 +1,30 @@
-# Nano Letters Target Research Plan  
+# 2026 Fall Research Plan  
 ## Hysteretic Push–Pull Silicon Devices for History-Dependent Vestibular Encoding
 
 > **Target journal:** *Nano Letters* (stretch goal)  
-> **Fallback:** *IEEE Transactions on Electron Devices*  
-> **Core direction:** 기존 LTspice push–pull 구조는 유지하고, STL hysteresis가 만들어내는 **history-dependent directional state**를 핵심 novelty로 확장한다.
-
+> **Fallback:** *IEEE Transactions on Electron Devices*
 ---
 
 ## 1. 연구 개요
 
-이 연구는 지금까지 만든 **두 개의 hysteretic silicon device 기반 push–pull vestibular circuit**을 크게 바꾸는 것이 아니다.
-
-기존 구조의 핵심은 그대로 유지한다.
-
-- 하나의 vestibular input을 두 반대 방향 채널이 받음
+- 하나의 vestibular input을 두 반대 방향(R, L) 채널이 받음
 - Right channel과 Left channel이 반대 방향으로 반응
 - 두 채널이 서로 영향을 주는 push–pull / antagonistic 구조
 - STL의 latch 및 hysteresis 특성을 이용
 - sinusoidal input을 포함한 시간 변화 신호를 LTspice에서 처리
-
-이번에 추가되는 핵심은 **출력을 단순 waveform reproduction으로 해석하지 않고, hysteresis에 의해 이전 방향이 유지되는 stateful encoding으로 해석하는 것**이다.
-
+- **출력을 단순 waveform reproduction으로 해석하는 것이 아니라, hysteresis에 의해 이전 방향이 유지되는 stateful encoding으로 해석**한다.
 즉,
-
 $$
-\text{Current output} = F\!\left(\text{current input},\ \text{previous device state}\right)
+\text{Current output} = F\\left(\text{current input},\ \text{previous device state}\right)
 $$
-
-를 device physics 자체에서 구현하는 것이 목표다.
+를 device physics 자체에서 구현하자.
 
 ---
 
-## 2. 기존 LTspice 구조와 이번 연구 방향의 관계
+## 2. LTspice 구조
 
-### 그대로 유지되는 것
+### version 2
+![alt text](image.png)
 
 기존 push–pull 구조:
 
